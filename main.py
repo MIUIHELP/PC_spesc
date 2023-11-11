@@ -194,8 +194,8 @@ def ftp_send():
     global ftp
     try:
         getSystemInfo()
-        ftp = ftplib.FTP('ftp.src.kiev.ua')
-        ftp.login("ftp4pc", "0uKT8whQ3")
+        ftp = ftplib.FTP('YOUR_ftp_server') 
+        ftp.login("LOGIN", "PSWORD")
         filename = "invent.txt"
         with open(filename, "rb") as file:
             ftp.storbinary(f"STOR {filename}", file)
